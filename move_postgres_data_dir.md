@@ -6,7 +6,7 @@ the data directory was successfully moved under /var/snssstools/pgsql/data on Pr
 
 locate  postgresql.conf
 
-# then modify data_directory with vi in the conf file
+#then modify data_directory with vi in the conf file
 vi /<file_path>/postgresql.conf
 
 data_directory = '/var/snssstools/pgsql/data' 
@@ -15,14 +15,14 @@ the only catch you is two config files need to be modified besides the one menti
 
 verify the file /usr/lib/systemd/system/postgresql.service , make sure PGDATA is set to new data directory as below,
 
-# Location of database directory
+#Location of database directory
 Environment=PGDATA=/var/snssstools/pgsql/data
 then restart postgres service with
 
 systemctl daemon-reload
 sudo systemctl restart postgresql
 
-# then double check data directory with 
+#then double check data directory with 
 service postgresql status
 
 ...
