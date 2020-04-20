@@ -9,7 +9,7 @@
    
    
 3. Generate user profile token on Jenkins server,
-create pipeline item on Jenkins,
+create Pipeline item on Jenkins,
 
 check generic-webhook-trigger, set random string for token, eg. s23sfRW43jrRxdvprn9h
 Set repo URL(ssh:git@{git_repo_url}) & credential(the SSH private key) in Pipeline -> Definition(pipeline script from SCM) -> SCM(Git) -> Repositories
